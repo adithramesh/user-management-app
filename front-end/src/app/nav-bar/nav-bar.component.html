@@ -1,0 +1,11 @@
+<nav class="navbar">
+    <!-- <div class="navbar-left" *ngIf="user$|async as user">
+      <span class="welcome-message">Welcome, {{ user.username}} !</span>
+    </div> -->
+    <div class="navbar-left" >
+      <span class="welcome-message">Welcome, {{ (user$|async)?.username}} !</span>
+    </div>
+    <div class="navbar-right">
+      <button class="logout-button" (click)="logout()">Logout</button>
+    </div>
+  </nav>

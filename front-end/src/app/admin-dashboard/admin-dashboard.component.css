@@ -1,0 +1,75 @@
+/* General styles for the AdminDashboardComponent */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+   
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+  }
+  
+  h2 {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  table {
+    font-family: 'Arial', sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+  }
+  
+  thead {
+    background-color: #17324e;
+    color: #ffffff;
+  }
+  
+  thead th {
+    padding: 0.8rem;
+    text-align: left;
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody td {
+    padding: 0.8rem;
+    text-align: left;
+  }
+  
+  button {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #a71d2a;
+  }
+  
+  @media screen and (max-width: 768px) {
+    table {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+    }
+  }
+  

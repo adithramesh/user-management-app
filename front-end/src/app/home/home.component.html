@@ -1,0 +1,32 @@
+<app-nav-bar></app-nav-bar>
+<div class="profile-container">
+  <h2>User Profile</h2>
+  <div class="profile-pic">
+    <img
+      [src]="profilePic || 'https://via.placeholder.com/150'"
+      alt="Profile Picture"
+      class="profile-picture"
+    />
+    <input type="file" (change)="onProfilePicUpload($event)" class="file-input" />
+  </div>
+  <div class="profile-details">
+    <label for="username">Username:</label>
+    <input
+      id="username"
+      type="text"
+      [ngModel]="(user$ | async)?.username"
+      (ngModelChange)="onUsernameChange($event)"
+      placeholder="Enter your username"
+    />
+
+    <label for="email">Email:</label>
+    <input
+      id="email"
+      type="email"
+      [ngModel]="(user$ | async)?.email"
+      (ngModelChange)="onUseremailChange($event)"
+      placeholder="Enter your email"
+    />
+
+    </div>
+</div>

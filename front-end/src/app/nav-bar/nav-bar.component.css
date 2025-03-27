@@ -1,0 +1,44 @@
+/* navbar.component.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50; /* Dark background color */
+    padding: 15px 20px; /* Spacing around the navbar */
+    color: white; /* Text color */
+    font-family: 'Arial', sans-serif; /* Font family */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  }
+  
+  .navbar-left {
+    flex: 1; /* Allow the left section to take available space */
+  }
+  
+  .welcome-message {
+    font-size: 18px; /* Font size for welcome message */
+    font-weight: 600; /* Bold text */
+  }
+  
+  .navbar-right {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+  }
+  
+  .logout-button {
+    background-color: #e74c3c; /* Red background for logout button */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+  
+  .logout-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+  }
+  
+  .logout-button:focus {
+    outline: none; /* Remove outline on focus */
+  }

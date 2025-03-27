@@ -1,0 +1,40 @@
+<!-- <div *ngIf="isSubmitting$ | async">Submitting...</div>
+<div *ngIf="message$ | async as message">{{ message }}</div>
+<div *ngIf="token$ | async as token">Token: {{ token }}</div>
+<div *ngIf="user$ | async as user">:User  {{ user?.username }}</div>
+{{user$|async}} -->
+
+<div class="register-container">
+    <div class="register-card">
+      <h2 class="register-title">User Management Register</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="submitReactiveregisterForm()">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" formControlName="username" placeholder="Enter your username" required>
+            <div *ngIf="registerForm.get('username')?.invalid && registerForm.get('username')?.touched" class="error-message">
+              Please enter a valid username.
+            </div>
+          </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" formControlName="email" placeholder="Enter your email" required>
+          <div *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched" class="error-message">
+            Please enter a valid email.
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" formControlName="password" placeholder="Enter your password" required>
+          
+          <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" class="error-message">
+            Password must be at least 6 characters long.
+          </div>
+        </div>
+  
+        <button type="submit" class="register-button" [disabled]="registerForm.invalid">Register</button>
+      </form>
+      <p class="login-link">Already registered? <a routerLink="/login">Login</a></p>
+    </div>
+  </div>
